@@ -27,8 +27,10 @@ bool AppDelegate::applicationDidFinishLaunching() {
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();
     if(!glview) {
-        glview = GLViewImpl::create("My Game");
+        glview = GLViewImpl::create("Freezing Ninja");
+        glview->setFrameSize(960, 544);
         director->setOpenGLView(glview);
+        glview->setDesignResolutionSize(480, 272, kResolutionNoBorder);
     }
 
     // turn on display FPS
