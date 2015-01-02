@@ -30,7 +30,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
         glview = GLViewImpl::create("Freezing Ninja");
         glview->setFrameSize(960, 544);
         director->setOpenGLView(glview);
-        glview->setDesignResolutionSize(480, 272, kResolutionNoBorder);
+        glview->setDesignResolutionSize(240, 136, kResolutionNoBorder);
     }
 
     // turn on display FPS

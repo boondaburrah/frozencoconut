@@ -64,7 +64,7 @@ bool HelloWorld::init()
     this->addChild(label, 1);
 
     // add "HelloWorld" splash screen"
-    auto sprite = Sprite::create("HelloWorld.png");
+    /*auto sprite = Sprite::create("HelloWorld.png");
 
     sprite->getTexture()->setAliasTexParameters();
 
@@ -73,6 +73,16 @@ bool HelloWorld::init()
 
     // add the sprite as a child to this layer
     this->addChild(sprite, 0);
+    */
+    // #### MY STUFF ###
+
+    SpriteFrameCache::getInstance()->addSpriteFramesWithFile("atlas/sprites.plist", "atlas/sprites.png");
+    auto tbsprite = Sprite::createWithSpriteFrameName("TextBox_0.png");
+    tbsprite->getTexture()->setAliasTexParameters();
+    tbsprite->setPosition(Vec2(visibleSize.width/2 + origin.x, tbsprite->getContentSize().height / 2));
+    this->addChild(tbsprite);
+
+
     
     return true;
 }
